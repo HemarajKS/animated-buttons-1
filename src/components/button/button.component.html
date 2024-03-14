@@ -1,0 +1,17 @@
+<div
+  class="btn-wrap"
+  [style.background]="backgroundClr"
+  [class.border]="border"
+  (mouseenter)="onHover(); applySVGStyles($event)"
+  (mouseleave)="onMouseOut(); applySVGStyles($event)"
+>
+  <button
+    class="btn liquidbgBlue"
+    [style.color]="isHovered ? textClr2 : textClr1 ? textClr1 : '#ffffff'"
+    id="animated-button"
+    (click)="onButtonClick()"
+  >
+    <span>{{ label }}</span>
+    <span [innerHTML]="x" *ngIf="icon" class="icon"></span>
+  </button>
+</div>
