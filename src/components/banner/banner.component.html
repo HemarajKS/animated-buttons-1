@@ -1,0 +1,25 @@
+<div class="banner__container">
+  <div class="banner__image-container">
+    <img [src]="image" class="banner__image" />
+    <div class="banner__image-bg"></div>
+  </div>
+  <div class="banner__info">
+    <div
+      class="banner__info-title banner__info-content"
+      [innerHTML]="title"
+    ></div>
+    <div
+      class="banner__info-subtitle banner__info-content"
+      [innerHTML]="subtitle"
+    ></div>
+    <div class="banner__info-button banner__info-content">
+      <app-button
+        label="Schedule a call"
+        backgroundClr="transparent"
+        [icon]="rightArrow"
+        [border]="true"
+        backgroundClr="#cd1242"
+      ></app-button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,111 @@
+.banner__container {
+  display: flex;
+  background: #181b2e;
+  width: 100vw;
+  justify-content: center;
+  gap: 54px;
+  padding: 40px 60px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.banner__image-container {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.banner__image {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  animation: imageAnimation 0.5s ease-in;
+}
+
+.banner__image-bg {
+  position: absolute;
+  top: 0;
+  width: 420px;
+  height: 420px;
+  background-image: url("../../assets/images/Ellipse\ 2818.svg");
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: rotateAnimation 0.5s ease-in;
+}
+
+.banner__info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.banner__info-button {
+  width: max-content;
+  padding: 2px;
+}
+
+.banner__info-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.banner__info-subtitle {
+  font-size: 30px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.banner__info-content {
+  animation: lineAnimation 1s ease forwards;
+  opacity: 0;
+  animation-fill-mode: both;
+}
+
+.banner__info-content:nth-child(1) {
+  animation-delay: 0s;
+}
+.banner__info-content:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.banner__info-content:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes lineAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(120deg);
+    opacity: 0.2;
+  }
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes imageAnimation {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}

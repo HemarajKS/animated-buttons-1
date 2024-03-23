@@ -14,10 +14,9 @@
   border-radius: 3px;
   outline: none;
   border: none;
-  background-position: center 120%;
+  background-position: center 112%;
   background-repeat: no-repeat;
-  transition: background-position 1.2s linear, color 1.2s linear,
-    border 1.2s linear;
+  transition: all 1s linear;
   cursor: pointer;
   font-size: 18px;
   padding: 17px 26px;
@@ -37,11 +36,11 @@
 }
 
 .border {
-  border: 2px solid transparent;
+  outline: 2px solid transparent;
 
-  transition: border 1.2s linear;
+  transition: outline 1.2s linear;
 }
 
 .border:hover {
-  border-color: #ffffff91;
+  outline-color: #ffffff91;
 }
